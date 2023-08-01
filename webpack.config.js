@@ -22,6 +22,16 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css$/, // .css 확장자를 가진 파일을 처리하는 로더 설정
+        use: ["style-loader", "css-loader"], // style-loader와 css-loader 추가
+      },
+      {
+        test: /\.svg$/, // .svg 확장자를 가진 파일을 처리하는 로더 설정
+        use: {
+          loader: "file-loader", // file-loader 추가
+        },
+      },
     ],
   },
   resolve: {
