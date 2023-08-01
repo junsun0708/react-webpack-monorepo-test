@@ -1,12 +1,10 @@
 const path = require("path");
-const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
   entry: {
-    main: "./src/project-core/index.js",
-    project1: "./src/project1/p1App.js",
-    project2: "./src/project2/p2App.js",
+    prj1: "./prj1/src/index.js",
+    prj2: "./prj2/src/index.js",
   },
   output: {
     filename: "[name].bundle.js",
@@ -24,7 +22,7 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"],
     alias: {
-      main: path.resolve(__dirname, "project-core"), // main 폴더를 모듈로 사용하기 위한 alias
+      core: path.resolve(__dirname, "core"),
     },
   },
 };
