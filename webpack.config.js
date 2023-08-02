@@ -1,8 +1,13 @@
 const path = require("path");
 
+//var webpack = require("webpack");
+//var HtmlWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
   mode: "development",
+  //plugins: [new HtmlWebpackPlugin(), new webpack.ProgressPlugin()],
   entry: {
+    core: "./core/index.js",
     prj1: "./prj1/src/index.js",
     prj2: "./prj2/src/index.js",
   },
