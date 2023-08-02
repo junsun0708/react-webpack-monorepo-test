@@ -12,7 +12,7 @@ module.exports = {
   },
   entry: {
     //입력
-    core: "./core/index.js",
+    core: "./core/src/index.js",
     prj1: "./prj1/src/index.js", //확장자 안써도 됨. 위에 resolve에 넣으면 알아서 찾아줌.
     prj2: "./prj2/src/index.js", //만약 prj2에 prj1이 있으면 prj1은 안써도됨.
   },
@@ -51,5 +51,8 @@ module.exports = {
     alias: {
       core: path.resolve(__dirname, "core"),
     },
+  },
+  externals: {
+    core: "@abc/commonModule", // core를 commonModule로 사용하도록 설정
   },
 };
